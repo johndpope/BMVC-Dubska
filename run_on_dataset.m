@@ -52,7 +52,7 @@ end
 function OV = find_ortho(DetectedVP, Camera, Normalization, SpaceSize, Space, ImgSize)
     V = zeros(9,3);    
     
-    [V(1:3,:), V(4:6,:), V(7:9,:)] = make_all_ortho(DetectedVP);
+%     [V(1:3,:), V(4:6,:), V(7:9,:)] = make_all_ortho(DetectedVP);
     V(1:3,:) = make_ortho(DetectedVP);
     V(4:6,:) = make_ortho(DetectedVP([2,1,3],:));
     V(7:9,:) = make_ortho(DetectedVP([3,1,2],:));
